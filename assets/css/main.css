@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* ----------------  Color Variables------------------ */
+:root {
+  --body-color: #ffffff;
+  --bg-color-1: #d62d2d;
+  --bg-color-2: rgb(65, 173, 88);
+  --text-color-1: #333333;
+  --text-color-2: #666666;
+  --border-color-1: #E0E0E0;
+  --border-color-2: #E0E0E0;
+  --shadow-color-1: rgba(0, 0, 0, 0.1);
+  --shadow-color-2: rgba(100, 100, 100, 0.1);
+  --btn-bg-1: #007BFF;
+  --btn-bg-2: #6C757D;
+  --white: #ffffff;
+
+  /* Success Colors */
+  --success-bg: #28a745; /* Green Background */
+  --success-text: #ffffff; /* White Text */
+  --success-border: #218838; /* Dark Green Border */
+
+  /* Danger Colors */
+  --danger-bg: #dc3545; /* Red Background */
+  --danger-text: #ffffff; /* White Text */
+  --danger-border: #c82333; /* Dark Red Border */
+
+  /* Warning Colors */
+  --warning-bg: #ffc107; /* Yellow Background */
+  --warning-text: #212529; /* Dark Text */
+  --warning-border: #e0a800; /* Dark Yellow Border */
+
+  /* Info Colors */
+  --info-bg: #17a2b8; /* Cyan Background */
+  --info-text: #ffffff; /* White Text */
+  --info-border: #117a8b; /* Dark Cyan Border */
+
+  /* Light Colors */
+  --light-bg: #f8f9fa; /* Light Gray Background */
+  --light-text: #212529; /* Dark Text */
+  --light-border: #dae0e5; /* Soft Gray Border */
+
+  /* Dark Colors */
+  --dark-bg: #343a40; /* Dark Gray Background */
+  --dark-text: #ffffff; /* White Text */
+  --dark-border: #23272b; /* Black Border */
+}
+
+
+/* ======================== RESET ======================== */
+/* ______________________________________ */
+  a { text-decoration: none; }
+  li { list-style: none; }
+  button, a { cursor: pointer; }
+
+  /* ::selection { */
+    /* background: var(--orange-yellow-crayola); */
+    /* color: var(--smoky-black); */
+  /* } */
+  
+  html { font-family:"Poppins", sans-serif;  }
+  body { background: var(--body-color)  }
+
+/*\______________________________________/*/
+  
+/* ======================== HEADER SECTION ======================= */
+/* ============================================================ */
+/* ============================================================ */
+
+/* ===================== Header Space Line ==================== */
+.headerSpaceLine-1{
+  height: 14px;
+  background-color: var(--bg-color-1);
+}
+
+.headerSpaceLine-2{
+  height: 11px;
+  background-color: var(--bg-color-2);
+}
+
+ /* ======================== Brand Line ======================== */
+ /* ------------- Times --------------- */
+
+.flag {
+  width: 15px;
+}
+
+.time-box{
+  width: 45%;
+  font-size: 20px;
+  text-align: start;
+}
+
+.time-box .timePlace{
+  border-bottom: 2px solid  #8a8a8a;
+  font-size: 20px;
+  width: auto;
+  text-align: start;
+}
+
+.times .city-name{
+  text-align: start;
+}
+.time {
+  font-weight: bold;
+  color: #333;
+}
+
+.flags{
+  text-align: end;
+}
+
+.flags img{
+  width: 200px;
+}
+
+
+@media (max-width: 992px) {
+  .times img{
+    width:15px ;
+  }
+  .times .city-name{
+    text-align: start;
+    font-size: 15px;
+  }
+  .time {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .times img{
+    width:18px ;
+  }
+  .times .city-name{
+    text-align: start;
+    font-size: 18px;
+  }
+  .time {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .flags{
+    text-align: center;
+  }
+  .flags img{
+    width: 90%;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .times img{
+    width:10px ;
+  }
+  .times .city-name{
+    text-align: start;
+    font-size: 14px;
+  }
+  .time {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+  }
+}
+
+ /* ======================== Nav Bar ======================== */
+ .navbar{
+  background-color: green;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: var(--white) !important;
+  border: 2px solid var(--white) ;
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: #096f21;
+}
+
+
+nav a:hover {
+  color: var(--white) !important;
+  border: 2px solid var(--white) ;
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: #096f21;
+}
+
+/* Focus Effect */
+nav a:focus {
+  color: var(--white) !important;
+  border: 2px solid var(--white) ;
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: #096f21;
+}
+
+
+/* You can also change the toggle button itself */
+.navbar-toggler {
+  background-color: white; 
+    border-color: black; 
+}
+
+
+
+/* Search Form Styling */
+#searchForm {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+#searchBar {
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#searchResults {
+  position: absolute;
+  top: 100%; /* Directly below the search bar */
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none; /* Hidden by default */
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  max-height: 200px; /* Max height for scroll */
+  overflow-y: auto; /* Enable vertical scroll */
+}
+
+#searchResults li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#searchResults li:last-child {
+  border-bottom: none;
+}
+
+#searchResults li a {
+  text-decoration: none;
+  color: #333;
+}
+
+#searchResults li a:hover {
+  color: #007BFF;
+}
+
+
+/* ============================================================= */
+/* ============================= MAIN=========================== */
+/* ============================================================= */
+
+.contact-form {
+  width:100% ;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* max-width: 600px; */
+}
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #232222;
+}
+
+.contactForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contactForm button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.contactForm button:disabled {
+  background-color: #ccc;
+}
+#status {
+  margin-top: 15px;
+  text-align: center;
+}
+#status.success {
+  color: green;
+}

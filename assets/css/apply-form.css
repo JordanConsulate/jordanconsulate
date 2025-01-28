@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #003875;
+    --secondary-color: #0056b3;
+    --accent-color: #ffd700;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --error-color: #dc3545;
+    --success-color: #28a745;
+}
+
+.visaContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    /* background-color: #fff; */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.visaContainer h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.visaContainer .form-group {
+    margin-bottom: 20px;
+}
+
+.visaContainer label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.visaContainer input[type="text"],
+.visaContainer input[type="email"],
+.visaContainer select,
+.visaContainer textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.visaContainer select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 12 12'%3E%3Cpath d='M10.293 3.293 6 7.586 1.707 3.293A1 1 0 0 0 .293 4.707l5 5a1 1 0 0 0 1.414 0l5-5a1 1 0 1 0-1.414-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.visaContainer .radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.visaContainer .radio-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+.visaContainer .radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.visaContainer textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.visaContainer button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.visaContainer button:hover {
+    background-color: var(--secondary-color);
+}
+
+.visaContainer .error {
+    color: var(--error-color);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.visaContainer #notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.visaContainer #notification.success {
+    background-color: var(--success-color);
+}
+
+.visaContainer #notification.error {
+    background-color: var(--error-color);
+}
+
+@media (max-width: 600px) {
+    .visaContainer  {
+        padding: 20px;
+    }
+
+    .visaContainer .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
