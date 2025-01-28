@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Visa Application Form</title>
+    <style>
+
+:root {
+            --primary-color: #003875;
+            --secondary-color: #0056b3;
+            --accent-color: #ffd700;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --error-color: #dc3545;
+            --success-color: #28a745;
+        }
+
+
+
+        .formContainer {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .formContainer h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .formContainer .form-group {
+            margin-bottom: 20px;
+        }
+
+        .formContainer label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .formContainer input[type="text"],
+        .formContainer input[type="email"],
+        .formContainer select,
+        .formContainer textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .formContainer select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 12 12'%3E%3Cpath d='M10.293 3.293 6 7.586 1.707 3.293A1 1 0 0 0 .293 4.707l5 5a1 1 0 0 0 1.414 0l5-5a1 1 0 1 0-1.414-1.414z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+
+        .formContainer .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .formContainer .radio-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+
+        .formContainer .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .formContainer textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .formContainer button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .formContainer button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .formContainer .error {
+            color: var(--error-color);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .formContainer #notification {
+            margin-top: 10px;
+            font-size: 20px;
+            color: green;
+            text-align: center;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .formContainer #notification.success {
+            background-color: var(--success-color);
+        }
+
+        .formContainer #notification.error {
+            background-color: var(--error-color);
+        }
+
+        @media (max-width: 600px) {
+            .formContainer form{
+                width: 100%;
+            }
+            .formContainer .container {
+                padding: 20px;
+            }
+
+            .formContainer .radio-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+       
+
+        .formContainer .error-input {
+            border-color: red;
+        }
+        .formContainer .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .formContainer button:disabled {
+            background-color: #005a26;
+        }
+    </style>
+</head>
+<body>
+    <div class="formContainer">
+        <h1>Jordan Visa Application Form</h1>
+        <form id="visaApplicationForm">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="passportNumber">Passport Number</label>
+                <input type="text" id="passportNumber" name="passportNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <input type="text" id="nationality" name="nationality" required>
+            </div>
+            <div class="form-group">
+                <label for="visaType">Visa Type</label>
+                <select id="visaType" name="visaType" required>
+                    <option value="">Select visa type</option>
+                    <option value="tourist">Tourist Visa</option>
+                    <option value="business">Business Visa</option>
+                    <option value="student">Student Visa</option>
+                    <option value="medical">Medical Visa</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Entry Type</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="entryType" value="single" required> Single Entry
+                    </label>
+                    <label>
+                        <input type="radio" name="entryType" value="multiple"> Multiple Entry
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="travelPurpose">Purpose of Travel</label>
+                <textarea id="travelPurpose" name="travelPurpose" required></textarea>
+            </div>
+            <input type="hidden" id="applyDate" name="applyDate">
+
+            <button type="submit">Submit Application</button>
+        </form>
+        <div id="notification"></div>
+    </div>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('visaApplicationForm');
+    const notification = document.getElementById('notification');
+    const submitButton = form.querySelector('button');
+
+    // Set the current date and time
+    const applyDate = new Date().toISOString();
+    document.getElementById('applyDate').value = applyDate;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (validateForm()) {
+            // Change button text to "Applying..."
+            submitButton.innerHTML = "Applying...";
+            submitButton.disabled = true;
+
+            let url = 'https://script.google.com/macros/s/AKfycbzQ8gmqRdBuaiCViAc2jiALDdOoCI5j_w_o2S48wXWrWOuhIzSZhduSQ_VTru3zHs0/exec'; // Replace this with your Google Apps Script URL
+            let d = new FormData(form);
+
+            // Send form data to Google Apps Script
+            fetch(url, {
+                method: "POST",
+                body: d
+            }).then((res) => res.text())
+            .then((finalRes) => {
+                form.reset();  // Reset the form
+
+                // Show success message for 10 seconds
+                notification.textContent = "Thank you! Your application has been submitted.";
+                notification.style.opacity = 1;
+
+                // Reset button text and re-enable it after 10 seconds
+                setTimeout(() => {
+                    notification.style.opacity = 0;
+                    submitButton.innerHTML = "Submit Application";
+                    submitButton.disabled = false;
+                }, 10000);
+            }).catch((error) => {
+                // Handle errors if the request fails
+                notification.textContent = "There was an error with the submission. Please try again.";
+                notification.style.opacity = 1;
+                setTimeout(() => {
+                    notification.style.opacity = 0;
+                    submitButton.innerHTML = "Submit Application";
+                    submitButton.disabled = false;
+                }, 10000);
+            });
+        }
+    });
+
+    function validateForm() {
+        let isValid = true;
+        const requiredFields = form.querySelectorAll('[required]');
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                showError(field, 'This field is required');
+            } else {
+                clearError(field);
+            }
+        });
+
+        const email = document.getElementById('email');
+        if (email.value && !isValidEmail(email.value)) {
+            isValid = false;
+            showError(email, 'Please enter a valid email address');
+        }
+
+        return isValid;
+    }
+
+    function showError(field, message) {
+        clearError(field);
+        const error = document.createElement('div');
+        error.className = 'error';
+        error.innerText = message;
+        field.parentNode.appendChild(error);
+        field.classList.add('error-input');
+    }
+
+    function clearError(field) {
+        const error = field.parentNode.querySelector('.error');
+        if (error) {
+            error.remove();
+        }
+        field.classList.remove('error-input');
+    }
+
+    function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+});
+
+    </script>
+</body>
+</html>
