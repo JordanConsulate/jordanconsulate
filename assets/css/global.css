@@ -875,9 +875,7 @@ width: 200px;
   
   @media (max-width: 991px) {
     .footer {
-      margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 60px;
+      margin: 0;
     }
   }
 
