@@ -1,0 +1,215 @@
+
+
+:root {
+    --primary-color: #003875;
+    --secondary-color: #0056b3;
+    --accent-color: #ffd700;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 57, 117, 0.329), rgba(0, 117, 10, 0.281)), url('../images/services.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.service-features {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service-features li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.service-features li::before {
+    content: '✓';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.accordion-content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.active {
+    padding: 15px;
+    max-height: 500px;
+}
+
+.cta-section {
+    background-color: var(--light-bg);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.cta-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
