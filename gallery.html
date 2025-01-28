@@ -168,7 +168,7 @@
                 </div>
 
                 <div class="topBarFlags col-4 col-md-3 ">
-                    <img src="assets/images/topbarFlags.png" alt="Nepal Jordan flag" class="img-fluid">
+                    <img src="assets/images/topBarFlags.png" alt="Nepal Jordan flag" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -238,7 +238,7 @@
 
     <!-- =============== Main  ================ -->
 
-    <div class="container">
+    <div class="gallery">
       <header class="gallery-header">
           <h1 class="gallery-title">Jordan Gallery</h1>
           <p class="gallery-subtitle">Explore the beauty and culture of Jordan through our curated collection of images</p>
@@ -253,12 +253,12 @@
       </div>
   </div>
 
-  <div id="imageModal" class="modal">
+  <div id="imageMmodal" class="mmodal">
       <span class="close" onclick="closeModal()">&times;</span>
       <span class="prev" onclick="changeImage(-1)">&#10094;</span>
       <span class="next" onclick="changeImage(1)">&#10095;</span>
-      <div class="modal-content">
-          <img id="modalImage" class="modal-image" src="/placeholder.svg" alt="Full size image">
+      <div class="mmodal-content">
+          <img id="mmodalImage" class="mmodal-image" src="/placeholder.svg" alt="Full size image">
       </div>
   </div>
 
@@ -410,8 +410,8 @@
       }
 
       async function openModal(imageIndex) {
-          const modal = document.getElementById('imageModal');
-          const modalImg = document.getElementById('modalImage');
+          const modal = document.getElementById('imageMmodal');
+          const modalImg = document.getElementById('mmodalImage');
           modal.style.display = 'block';
           modalImg.src = '';
           modalImg.alt = 'Loading...';
@@ -419,7 +419,7 @@
 
           const loadingSpinner = document.createElement('div');
           loadingSpinner.className = 'loading-spinner';
-          modal.querySelector('.modal-content').appendChild(loadingSpinner);
+          modal.querySelector('.mmodal-content').appendChild(loadingSpinner);
 
           const img = new Image();
           img.onload = () => {
@@ -431,7 +431,7 @@
       }
 
       function closeModal() {
-          document.getElementById('imageModal').style.display = 'none';
+          document.getElementById('imageMmodal').style.display = 'none';
       }
 
       function changeImage(direction) {
@@ -443,7 +443,7 @@
 
       // Close modal when clicking outside the image
       window.onclick = function(event) {
-          const modal = document.getElementById('imageModal');
+          const modal = document.getElementById('imageMmodal');
           if (event.target === modal) {
               closeModal();
           }
@@ -550,6 +550,5 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/global.js"></script>
     <script src="assets/js/gallery.js"></script>
-      <script src="assets/js/cache-buster.js"></script>
 </body>
 </html>
