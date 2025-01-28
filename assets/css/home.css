@@ -1,0 +1,520 @@
+
+/* =================== Hero Section =================== */
+.hero{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+}
+.hero .slides{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ede6d6;
+}
+.hero .slides img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.hero .hero .slides img:not(.active){
+    top: 0;
+    left: -100%;
+}
+.hero span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #ffffff;
+    opacity: 0.8;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+.hero span.next{
+    right: 20px;
+}
+.hero span.prev{
+    left: 20px;
+}
+.hero span.next:hover, span.prev:hover{
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #222;
+} 
+.hero .dotsContainer{
+    position: absolute;
+    bottom: 10px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hero .dotsContainer .dot{
+    width: 15px;
+    height: 15px;
+    margin: 0px 2px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+.hero .dotsContainer .active{
+    background-color: #555;
+}
+
+@keyframes next1{
+    from{
+        left: 0%
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left: 100%
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes prev1{
+    from{
+        left: 0%
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left: -100%
+    }
+    to{
+        left: 0%;
+    }
+}
+
+/* =================== Hero Section =================== */
+
+
+/* =================== About Section =================== */
+            
+/* about section styling */
+.about .sectionTitle::after{
+    content: "Who We Are";
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: crimson;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+
+@media (max-width: 947px){
+
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .about .about-content .right .text{
+        font-size: 19px;
+    }
+}
+
+/* =================== About Section =================== */
+
+
+/* =================== Services Section =================== */
+/* services section styling */
+.services, .teams{
+    color:#fff;
+    background: #003b03;
+}
+.services .sectionTitle::before,
+.teams .sectionTitle::before{
+    background: #fff;
+}
+
+.services .sectionTitle::after,
+.teams .sectionTitle::after{
+    background: #003b03;
+    content: "how we help";
+}
+
+.services .serv-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.services .card {
+    background: #008807;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.services .serv-content .card:hover{
+    background: crimson;
+}
+.services .box {
+    padding: 20px;
+    text-align: center;
+}
+
+.services .box i {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.services .box .text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.services .box p {
+    font-size: 16px;
+    color: #dddddd;
+}
+.services .more {
+    color: #acacac;
+    text-decoration: none;
+}
+.services .more:hover {
+    color: #020202;
+}
+
+/* =================== Services Section End =================== */
+
+
+/* =================== Article Section =================== */
+.article {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px 0;
+}
+
+.article-date {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+
+.articles .sectionTitle::after,
+.articles .sectionTitle::after{
+    /* background: #003b03; */
+    content: "how we help";
+}
+
+.article-title {
+    color: #2b669a;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+    display: block;
+}
+
+.article-title:hover {
+    text-decoration: underline;
+}
+
+.article-preview {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.more-link {
+    color: #2b669a;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.more-link:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    color: #2b669a;
+}
+
+.pagination button.active {
+    background: #2b669a;
+    color: white;
+    border-color: #2b669a;
+}
+
+.pagination button:hover:not(.active) {
+    background: #f5f5f5;
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+/* =================== Article Section End =================== */
+
+
+
+/* =================== visa info Section =================== */
+    /* visa information section styling */
+
+    .visa-info {
+        color: #ffffff;
+        background-color: #003b03;
+    }
+
+    .visa-info .sectionTitle::after {
+        content: "Visa Info";
+        background-color: #003b03;
+    }
+
+    .visa-info .sectionTitle::before{
+        background: #ffffff;
+    }
+    
+    .visa-info .visa-content .right {
+        width: 100%;
+    }
+    
+    .visa-info .visa-content .right .text {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .visa-info li{
+        margin-left: 30px;
+    }
+    
+    .visa-info .visa-content .right p {
+        text-align: justify;
+    }
+    
+    
+    @media (max-width: 947px) {
+        .visa-info .visa-content .column {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 500px) {
+        .visa-info .visa-content .right .text {
+            font-size: 19px;
+        }
+    }
+/* =================== visa info Section End =================== */
+
+
+/* =================== Useful Links Section =================== */
+/* useful links section styling */
+.useful-links .sectionTitle::after {
+    content: "Explore More";
+}
+
+.useful-links .useful-content .left {
+    width: 45%;
+}
+
+.useful-links .useful-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.useful-links .useful-content .right {
+    width: 55%;
+}
+
+.useful-links .useful-content .right .links {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.useful-links .useful-content .right .links span {
+    color: crimson;
+}
+
+.useful-links .useful-content .right p {
+    text-align: justify;
+}
+
+.useful-links .useful-content .right .more {
+    padding-left: 10px;
+}
+
+@media (max-width: 947px) {
+    .useful-links .useful-content .column {
+        width: 100%;
+    }
+
+    .useful-links .useful-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .useful-links .useful-content .right {
+        flex: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .useful-links .useful-content .right .links {
+        font-size: 19px;
+    }
+    
+.useful-links .useful-content .left img {
+    height: auto;
+    width: 100%;
+}
+}
+
+.right .link {
+    display: block;
+    margin-top: 10px;
+    color: #005813;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding-left: 10px;
+}
+
+.right .link:hover {
+    color:crimson;
+}
+/* =================== Useful Links Section End =================== */
+
+
+/* =================== Gallery Section =================== */
+.gallery{
+        color: #ffffff;
+        background: #003b03;
+}
+
+
+      /* gallery section styling */
+      .gallery .sectionTitle::after {
+        content: "Our Gallery"; 
+        background: #003b03;
+      }
+
+      
+    .gallery .sectionTitle::before{
+        background: #ffffff;
+    }
+    
+
+      .gallery .btn {
+        margin-top: 20px;
+        margin-left: 30px;
+      }
+
+      .gallery .slide-container {
+        margin: 0 30px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .gallery .card {
+        background: #fff;
+        border-radius: 8px;
+      }
+
+      .gallery .card .image-box {
+        height: 300px;
+      }
+
+      .gallery .card .image-box img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .gallery .swiper-navBtn {
+        position: absolute;
+        top: 50%;
+        color: #000;
+        height: 50px;
+        width: 50px;
+        transform: translateY(-50%);
+        background: #fff;
+        border-radius: 50%;
+      }
+
+      .gallery .swiper-navBtn::before,
+      .gallery .swiper-navBtn::after {
+        font-size: 24px;
+      }
+
+      .gallery .swiper-pagination-bullet {
+        background-color: #333;
+      }
+
+      @media screen and (max-width: 768px) {
+        .gallery .swiper-navBtn {
+          display: none;
+        }
+      }
+/* =================== Gallery Section End =================== */
